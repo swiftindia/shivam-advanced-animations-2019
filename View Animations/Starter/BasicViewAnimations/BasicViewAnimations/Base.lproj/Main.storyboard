@@ -26,16 +26,26 @@
                                 <rect key="frame" x="-7" y="684" width="389" height="128"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="FoK-d5-Pop">
-                                <rect key="frame" x="72" y="87" width="230" height="100"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="balloon" translatesAutoresizingMaskIntoConstraints="NO" id="3pi-q1-oQn">
+                                <rect key="frame" x="135" y="615" width="105" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud1" translatesAutoresizingMaskIntoConstraints="NO" id="FoK-d5-Pop">
+                                <rect key="frame" x="60" y="95" width="115" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cloud2" translatesAutoresizingMaskIntoConstraints="NO" id="xMc-MV-UPc">
+                                <rect key="frame" x="193" y="189" width="115" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="cloudImageView" destination="FoK-d5-Pop" id="Llo-pQ-BpY"/>
+                        <outlet property="balloon" destination="3pi-q1-oQn" id="KEs-JA-ias"/>
+                        <outlet property="cloud1" destination="FoK-d5-Pop" id="NVJ-0X-bJg"/>
+                        <outlet property="cloud2" destination="xMc-MV-UPc" id="d2i-f9-KP0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -44,8 +54,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cloud" width="115" height="50"/>
-        <image name="ground" width="9006" height="1511"/>
+        <image name="balloon" width="840" height="979"/>
+        <image name="cloud1" width="115" height="50"/>
+        <image name="cloud2" width="138" height="49"/>
+        <image name="ground" width="9006" height="1226"/>
         <image name="sky" width="3264" height="1952"/>
     </resources>
 </document>
