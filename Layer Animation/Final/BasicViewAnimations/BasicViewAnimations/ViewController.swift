@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cloud2: UIImageView!
     
-    @IBOutlet weak var flyButton: UIButton!
     @IBOutlet weak var balloon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,12 +46,17 @@ class ViewController: UIViewController {
     }
     
     func animateBalloon(){
-        let fly = CABasicAnimation(keyPath: "position.y")
+        let fly = CASpringAnimation(keyPath: "position.y")
         fly.fromValue = balloon.layer.position.y
         fly.toValue = 100.0
-        fly.duration = 5.0
+        //fly.duration = 5.0
         fly.beginTime = CACurrentMediaTime() + 1.0
         fly.fillMode = .backwards
+        fly.mass = 1
+        fly.initialVelocity = 0
+        fly.stiffness = 100
+        fly.damping = 10
+        fly.duration = fly.settlingDuration
         balloon.layer.add(fly, forKey: nil)
         balloon.layer.position.y = 100
     }
