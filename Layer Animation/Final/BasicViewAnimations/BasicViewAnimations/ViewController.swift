@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var cloud2: UIImageView!
     
+    @IBOutlet weak var flyButton: UIButton!
     @IBOutlet weak var balloon: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()

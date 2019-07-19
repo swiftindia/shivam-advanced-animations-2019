@@ -38,6 +38,11 @@
                                 <rect key="frame" x="193" y="189" width="115" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8W-cX-dAI">
+                                <rect key="frame" x="93" y="560" width="190" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Lets Fly" backgroundImage="button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -46,15 +51,17 @@
                         <outlet property="balloon" destination="3pi-q1-oQn" id="KEs-JA-ias"/>
                         <outlet property="cloud1" destination="FoK-d5-Pop" id="NVJ-0X-bJg"/>
                         <outlet property="cloud2" destination="xMc-MV-UPc" id="d2i-f9-KP0"/>
+                        <outlet property="flyButton" destination="g8W-cX-dAI" id="cSZ-Au-mHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="61.600000000000001" y="25.862068965517242"/>
         </scene>
     </scenes>
     <resources>
         <image name="balloon" width="840" height="979"/>
+        <image name="button" width="600" height="181"/>
         <image name="cloud1" width="115" height="50"/>
         <image name="cloud2" width="138" height="49"/>
         <image name="ground" width="9006" height="1226"/>
