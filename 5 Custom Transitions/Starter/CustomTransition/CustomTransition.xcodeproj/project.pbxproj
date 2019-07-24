@@ -14,7 +14,6 @@
 		4099A6F422E7FC2E0008125C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4099A6F222E7FC2E0008125C /* LaunchScreen.storyboard */; };
 		4099A6FC22E800240008125C /* Avengers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099A6FB22E800240008125C /* Avengers.swift */; };
 		4099A6FE22E805470008125C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099A6FD22E805470008125C /* DetailViewController.swift */; };
-		4099A70422E80B6A0008125C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099A70322E80B6A0008125C /* CustomTableViewCell.swift */; };
 		4099A70922E8129B0008125C /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4099A70822E8129B0008125C /* CommonView.swift */; };
 		4099A70B22E812B10008125C /* CommonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4099A70A22E812B10008125C /* CommonView.xib */; };
 /* End PBXBuildFile section */
@@ -29,7 +28,6 @@
 		4099A6F522E7FC2E0008125C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4099A6FB22E800240008125C /* Avengers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avengers.swift; sourceTree = "<group>"; };
 		4099A6FD22E805470008125C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		4099A70322E80B6A0008125C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		4099A70822E8129B0008125C /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		4099A70A22E812B10008125C /* CommonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,17 +62,16 @@
 		4099A6E822E7FC2B0008125C /* CustomTransition */ = {
 			isa = PBXGroup;
 			children = (
-				4099A6E922E7FC2B0008125C /* AppDelegate.swift */,
 				4099A6EB22E7FC2B0008125C /* ViewController.swift */,
+				4099A6FD22E805470008125C /* DetailViewController.swift */,
+				4099A70A22E812B10008125C /* CommonView.xib */,
+				4099A70822E8129B0008125C /* CommonView.swift */,
 				4099A6FB22E800240008125C /* Avengers.swift */,
 				4099A6ED22E7FC2B0008125C /* Main.storyboard */,
 				4099A6F022E7FC2E0008125C /* Assets.xcassets */,
 				4099A6F222E7FC2E0008125C /* LaunchScreen.storyboard */,
 				4099A6F522E7FC2E0008125C /* Info.plist */,
-				4099A6FD22E805470008125C /* DetailViewController.swift */,
-				4099A70322E80B6A0008125C /* CustomTableViewCell.swift */,
-				4099A70822E8129B0008125C /* CommonView.swift */,
-				4099A70A22E812B10008125C /* CommonView.xib */,
+				4099A6E922E7FC2B0008125C /* AppDelegate.swift */,
 			);
 			path = CustomTransition;
 			sourceTree = "<group>";
@@ -151,7 +148,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4099A70422E80B6A0008125C /* CustomTableViewCell.swift in Sources */,
 				4099A6FE22E805470008125C /* DetailViewController.swift in Sources */,
 				4099A6FC22E800240008125C /* Avengers.swift in Sources */,
 				4099A6EC22E7FC2B0008125C /* ViewController.swift in Sources */,
@@ -302,14 +298,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = R6GKU24CD6;
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Shivam.CustomTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = BookMyShow.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "BookMyShow-Release-Developers";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,14 +317,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = CustomTransition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Shivam.CustomTransition;
+				PRODUCT_BUNDLE_IDENTIFIER = BookMyShow.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

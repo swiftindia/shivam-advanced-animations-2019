@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +35,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         reusableView.imageView.image = UIImage(named: avenger.imageName)
         reusableView.nameLabel.text = avenger.name
         reusableView.center = cell.center
-        reusableView.frame = CGRect(x: 0, y: 0, width: cell.bounds.size.width - 40, height: cell.bounds.size.height - 40)
+        reusableView.frame = CGRect(x: 20, y: 20, width: cell.bounds.size.width - 40, height: cell.bounds.size.height - 40)
         reusableView.tag = 1
         cell.contentView.addSubview(reusableView)
-        reusableView.center = CGPoint(x: cell.bounds.midX, y: cell.bounds.midY)
         
         return cell
     }
@@ -46,13 +47,16 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "present", sender: indexPath.row)
+        DispatchQueue.main.async {
+            self.presentDetail(for: indexPath.row)
+        }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! DetailViewController
-        let index = sender as! Int
-        vc.avenger = Avengers.all()[index]
+    func presentDetail(for index:Int){
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController{
+            vc.avenger = Avengers.all()[index]
+            present(vc, animated: true, completion: nil)
+        }
     }
     
 }
