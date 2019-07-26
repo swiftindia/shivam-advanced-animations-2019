@@ -46,19 +46,16 @@ class ViewController: UIViewController {
     }
     
     func animateBalloon(){
-        let fly = CASpringAnimation(keyPath: "position.y")
-        fly.fromValue = balloon.layer.position.y
-        fly.toValue = 100.0
-        //fly.duration = 5.0
-        fly.beginTime = CACurrentMediaTime() + 1.0
-        fly.fillMode = .backwards
+        let fly = CASpringAnimation(keyPath: "position.x")
+        fly.fromValue = 0
+        fly.toValue = 300
         fly.mass = 1
         fly.initialVelocity = 0
         fly.stiffness = 100
         fly.damping = 10
         fly.duration = fly.settlingDuration
         balloon.layer.add(fly, forKey: nil)
-        balloon.layer.position.y = 100
+        balloon.layer.position.y = 300
     }
 }
 
