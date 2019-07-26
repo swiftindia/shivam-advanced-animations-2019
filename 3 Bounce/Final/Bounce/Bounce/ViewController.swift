@@ -14,23 +14,31 @@ class ViewController: UIViewController {
     let duration = 1.0
     let widthFactor: CGFloat = 1.1
     let heightFactor: CGFloat = 0.95
-    var bounceSize = CGSize.zero
+    var bounceFrame = CGRect.zero
     
     var maskLayer = CAShapeLayer()
     var roundLayer = CAShapeLayer()
     override func viewDidLoad() {
         super.viewDidLoad()
-        addLayer()
-        addMask()
         
-        bounceSize = CGSize(width: ball.bounds.size.width * widthFactor, height: ball.bounds.size.height * heightFactor)
-    
-        animate()
+        
+        let bounceSize = CGSize(width: ball.bounds.size.width * widthFactor, height: ball.bounds.size.height * heightFactor)
+        bounceFrame = CGRect(x: (ball.bounds.width - bounceSize.width)/2,
+                              y: ball.bounds.height - bounceSize.height,
+                              width: bounceSize.width, height: bounceSize.height)
+        
         
         
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addLayer()
+        addMask()
+        animate()
+    }
+    
     func addMask(){
         maskLayer.path = UIBezierPath(ovalIn: ball.bounds).cgPath
         ball.layer.mask = maskLayer
@@ -57,11 +65,9 @@ class ViewController: UIViewController {
             self.animate()
         }
       
-        let newFrame = CGRect(x: (ball.bounds.width - bounceSize.width)/2,
-                              y: ball.bounds.height - bounceSize.height,
-            width: bounceSize.width, height: bounceSize.height)
         
-        let newPath = UIBezierPath(ovalIn: newFrame).cgPath
+        
+        let newPath = UIBezierPath(ovalIn: bounceFrame).cgPath
         let anim = CABasicAnimation(keyPath: "path")
         anim.toValue = newPath
         anim.timingFunction = CAMediaTimingFunction(name: .easeOut)
